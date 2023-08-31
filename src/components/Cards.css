@@ -1,0 +1,8 @@
+.divCards{
+    display: flex;
+    background-color: rgba(0, 255, 255, 0.388);
+    padding-left: 10vw;
+    padding-bottom: 3vw;
+    margin-top: 1vh;
+    padding-top: 20vh;
+}
