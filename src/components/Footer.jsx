@@ -6,28 +6,28 @@ export default function Footer(){
             
             
       <ul><strong>Tomorrow Lab</strong>
-        <li class="list-group-item">® 2023</li>
+        <li>® 2023</li>
       </ul>
       <ul><strong>Nos encontre</strong>
-        <li class="list-group-item">Instagram</li>
-        <li class="list-group-item">Website</li>
-        <li class="list-group-item">LinkedIn</li>
-        <li class="list-group-item">Telegram</li>
-        <li class="list-group-item">(00) 00000-0000</li>
+        <li>Instagram</li>
+        <li>Website</li>
+        <li>LinkedIn</li>
+        <li>Telegram</li>
+        <li>(00) 00000-0000</li>
       </ul>
       <ul><strong>Compania</strong>
-        <li class="list-group-item">Sobre nós</li>
-        <li class="list-group-item">Carreiras</li>
-        <li class="list-group-item">Suporte</li>
-        <li class="list-group-item">Preços</li>
-        <li class="list-group-item">FAQ</li>
+        <li>Sobre nós</li>
+        <li>Carreiras</li>
+        <li>Suporte</li>
+        <li>Preços</li>
+        <li>FAQ</li>
       </ul>
       <ul><strong>Ajuda</strong>
-        <li class="list-group-item">Central de ajuda</li>
-        <li class="list-group-item">Contate-nos</li>
-        <li class="list-group-item">Política de privacidade</li>
-        <li class="list-group-item">Termos</li>
-        <li class="list-group-item">Suporte personalizado</li>
+        <li>Central de ajuda</li>
+        <li>Contate-nos</li>
+        <li>Política de privacidade</li>
+        <li>Termos</li>
+        <li>Suporte personalizado</li>
       </ul>
     
             </div>

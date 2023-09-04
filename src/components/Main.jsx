@@ -1,5 +1,6 @@
 import Form from './Form'
 import Cards from './Cards'
+import style from "./Cards.css"
 import styles from './Main.css'
 function Main(){    
     return (        
@@ -10,21 +11,11 @@ function Main(){
                 </div>
             </section>
             <section className='secH2'>
+                <Cards titulo={'Sala'} className={'divCards2'} />
+                <Cards titulo={'Cozinha'} className={'divCards'} />
+                <Cards titulo={'Banheiro'} className={'divCards3'} />
+                <Cards titulo={'Quarto'} className={'divCards4'} />
 
-                <h2>Programação</h2>
-                <Cards />
-                <h2>Front-End</h2>
-                <Cards />
-                <h2>Data Science</h2>
-                <Cards />
-                <h2>Devops</h2>
-                <Cards />
-                <h2>UX e Design</h2>
-                <Cards />
-                <h2>Mobile</h2>
-                <Cards />
-                <h2>Inovação e Gestão</h2>
-                <Cards />
             </section>
         </main>   
     )}
