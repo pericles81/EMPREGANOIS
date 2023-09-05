@@ -42,7 +42,7 @@ const [list, SetList] = useState([])
             
             onBlur={(e)=>handleChange(e)}
              />
-            {emptyValue && form["nome"] == "" ? <span className='cu'>O CAMPO PRECISA SER PREENCHIDO</span> : ""}
+            {emptyValue && form["nome"] == "" ? <span >O CAMPO PRECISA SER PREENCHIDO</span> : ""}
             <Input 
             nameLabel={'Preço *: '} 
             type={'number'}
@@ -52,7 +52,7 @@ const [list, SetList] = useState([])
             
             onBlur={(e)=>handleChange(e)}
              />
-            {emptyValue && form['preco'] == "" ? <span className='cu' >O CAMPO PRECISA SER PREENCHIDO</span> : ''}
+            {emptyValue && form['preco'] == "" ? <span >O CAMPO PRECISA SER PREENCHIDO</span> : ''}
             <Input 
             nameLabel={'Imagem *: '} 
             type={'text'}
@@ -62,7 +62,7 @@ const [list, SetList] = useState([])
             
             onBlur={(e)=>handleChange(e)}
              />
-            {emptyValue && form['imagem'] == "" ? <span className='cu'>O CAMPO PRECISA SER PREENCHIDO</span> : ''}
+            {emptyValue && form['imagem'] == "" ? <span >O CAMPO PRECISA SER PREENCHIDO</span> : ''}
             <div>
                 <select  onChange={(e)=>handleChange(e)} name="tipo">
                     <option >-</option>
@@ -72,7 +72,7 @@ const [list, SetList] = useState([])
                     <option >Quarto</option>
                 </select>
 
-                {emptyValue && form['tipo'] == "" ? <span className='cu'>O CAMPO PRECISA SER PREENCHIDO</span> : ''}
+                {emptyValue && form['tipo'] == "" ? <span >O CAMPO PRECISA SER PREENCHIDO</span> : ''}
             </div>
             
             <button type="submit" >Criar card</button>
