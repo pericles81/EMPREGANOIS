@@ -1,0 +1,1 @@
+export const Dados = ['-','Sala','Banheiro','Cozinha','Quarto']

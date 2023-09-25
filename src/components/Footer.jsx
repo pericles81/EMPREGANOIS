@@ -1,11 +1,9 @@
-import styles from './Footer.css'
+import styles from './Styles/Footer.css'
 
-export default function Footer(){
-    return(
-        <div className='divFooter'>
-            
-            
-      <ul><strong>Tomorrow Lab</strong>
+export default function Footer() {
+  return (
+    <footer className='divFooter'>
+      <ul><strong>Mercado Novo</strong>
         <li>® 2023</li>
       </ul>
       <ul><strong>Nos encontre</strong>
@@ -29,8 +27,7 @@ export default function Footer(){
         <li>Termos</li>
         <li>Suporte personalizado</li>
       </ul>
-    
-            </div>
-        
-    )
+    </footer>
+
+  )
 }

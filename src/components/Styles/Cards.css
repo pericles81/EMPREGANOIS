@@ -1,0 +1,17 @@
+.divCards2{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #49d313af;
+    width: 100%;
+    padding-top: 3%;
+}
+.divCard1{
+    width: 30vh;
+    height: 15vh;
+    background-color: #f1dc3d;
+    border-radius: 10px 5px 0px 0px;
+}
+
+.divCardTittle{
+    background-color: #00bb68;
+}
