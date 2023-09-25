@@ -28,7 +28,7 @@ export default function Form() {
 
     return (
         <div className="divForm">
-<<<<<<< HEAD
+
             <h2>Preencha os dados para criar o card dos Produtos.</h2>
             <form onSubmit={(e) => { handleSubmit(e) }}>
                 <Input
@@ -70,7 +70,6 @@ export default function Form() {
                 </>
                 <button type="submit" >Criar card</button>
             </form>
-=======
         <h2>Preencha os dados para criar o card dos Produtos.</h2>
         <form onSubmit={(e)=>{handleSubmit(e)}}>
             <Input 
@@ -118,7 +117,7 @@ export default function Form() {
             <button type="submit" >Criar card</button>
         </form>
         
->>>>>>> 0a7e624968c15f150558536799d8c649eb29d794
+
         </div>
     )
 }
