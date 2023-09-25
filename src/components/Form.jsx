@@ -28,6 +28,7 @@ export default function Form() {
 
     return (
         <div className="divForm">
+<<<<<<< HEAD
             <h2>Preencha os dados para criar o card dos Produtos.</h2>
             <form onSubmit={(e) => { handleSubmit(e) }}>
                 <Input
@@ -69,6 +70,55 @@ export default function Form() {
                 </>
                 <button type="submit" >Criar card</button>
             </form>
+=======
+        <h2>Preencha os dados para criar o card dos Produtos.</h2>
+        <form onSubmit={(e)=>{handleSubmit(e)}}>
+            <Input 
+            nameLabel={'Nome do Produto *: '} 
+            type={'text'}
+            name={'nome'}
+            htmlFor={'nome'}
+            id={'campoNome'}
+            
+            onBlur={(e)=>handleChange(e)}
+             />
+            {emptyValue && form["nome"] == "" ? <span >O CAMPO PRECISA SER PREENCHIDO</span> : ""}
+            <Input 
+            nameLabel={'Preço *: '} 
+            type={'number'}
+            name={'preco'}
+            htmlFor={'preco'}
+            id={'campoNome'}
+            
+            onBlur={(e)=>handleChange(e)}
+             />
+            {emptyValue && form['preco'] == "" ? <span >O CAMPO PRECISA SER PREENCHIDO</span> : ''}
+            <Input 
+            nameLabel={'Imagem *: '} 
+            type={'text'}
+            name={'imagem'}
+            htmlFor={'imagem'}
+            id={'campoNome'}
+            
+            onBlur={(e)=>handleChange(e)}
+             />
+            {emptyValue && form['imagem'] == "" ? <span >O CAMPO PRECISA SER PREENCHIDO</span> : ''}
+            <div>
+                <select  onChange={(e)=>handleChange(e)} name="tipo">
+                    <option >-</option>
+                    <option >Sala</option>
+                    <option >Cozinha</option>
+                    <option >Banheiro</option>
+                    <option >Quarto</option>
+                </select>
+
+                {emptyValue && form['tipo'] == "" ? <span >O CAMPO PRECISA SER PREENCHIDO</span> : ''}
+            </div>
+            
+            <button type="submit" >Criar card</button>
+        </form>
+        
+>>>>>>> 0a7e624968c15f150558536799d8c649eb29d794
         </div>
     )
 }
