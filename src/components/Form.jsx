@@ -5,7 +5,7 @@ import { Dados } from "../Dados.js"
 
 export default function Form() {
     const [emptyValue, setEmptyValue] = useState(false)
-    
+
     const [form, setForm] = useState({
         nome: "",
         preco: "",
@@ -70,7 +70,6 @@ export default function Form() {
                 </>
                 <button type="submit" >Criar card</button>
             </form>
-        
 
         </div>
     )
