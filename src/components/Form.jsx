@@ -2,7 +2,7 @@ import { useState } from "react"
 import Input from "./Forms/Input"
 import styes from './Styles/Form.css'
 import { Dados } from "../Dados.js"
-
+import axios from "axios"
 export default function Form() {
     const [emptyValue, setEmptyValue] = useState(false)
 
@@ -25,6 +25,19 @@ export default function Form() {
         setEmptyValue(emptyValues)
 
     }
+
+    const handlePostRequest = async () => {
+        try {
+          // Fazendo uma requisição POST para a API
+          const response = await axios.post('http://localhost:8081', form);
+    
+          // Lida com a resposta da API conforme necessário
+          console.log('Response from server:', response.data);
+        } catch (error) {
+          // Trata erros
+          console.error('Error making POST request:', error);
+        }
+      };
 
     return (
         <div className="divForm">
@@ -68,7 +81,7 @@ export default function Form() {
                     </select>
                     <div> {emptyValue && form['tipo'] == "" ? <span className='valide'>O CAMPO PRECISA SER PREENCHIDO</span> : ''}</div>
                 </>
-                <button type="submit" >Criar card</button>
+                <button type="submit" onClick={handlePostRequest} >Criar card</button>
             </form>
 
         </div>

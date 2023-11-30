@@ -1,20 +1,36 @@
-import Card from "./Cards/Card"
+import React, { useState, useEffect } from 'react';
+import Card from "./Cards/Card.jsx"
 import styles from "./Styles/Cards.css"
+import axios from "axios"
+export default function Cards() {
+    const [data, setData] = useState([]);
 
-export default function Cards({ className }) {
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get('http://localhost:8081');
+                setData(response.data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+        fetchData();
+    }, []);
 
+    const deletePost = async (id) =>   {
+        await axios.delete(`http://localhost:8081/${id}`)
+    }
     return (
-        <div>
+        <>
             <div className='divCardTittle'>
                 <h2>Produtos cadastrados</h2>
             </div>
             <div className="divCards2" >
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                {data.map((e) => {
+                    return <Card imagem={e.imagem} nome={e.nome} preco={e.preco} onClick={()=>deletePost(e._id)} />               
+                })}
+                
             </div>
-        </div>
+        </>
     )
 }

@@ -1,5 +1,7 @@
 import styles from './Styles/Footer.css'
-
+const ajuda = ['Central de ajuda', 'Contate-nos', 'Política de privacidade', 'Termos', 'Suporte personalizado']
+const nosEncontre = ['Instagram', 'Website', 'LinkedIn', 'Telegram', '(00) 00000-0000']
+const compania = ['Sobre nós', 'Carreiras', 'Suporte', 'Preços', 'FAQ']
 export default function Footer() {
   return (
     <footer className='divFooter'>
@@ -7,25 +9,21 @@ export default function Footer() {
         <li>® 2023</li>
       </ul>
       <ul><strong>Nos encontre</strong>
-        <li>Instagram</li>
-        <li>Website</li>
-        <li>LinkedIn</li>
-        <li>Telegram</li>
-        <li>(00) 00000-0000</li>
+        {nosEncontre.map((e) => {
+          return <li>{e}</li>
+        })}
       </ul>
       <ul><strong>Compania</strong>
-        <li>Sobre nós</li>
-        <li>Carreiras</li>
-        <li>Suporte</li>
-        <li>Preços</li>
-        <li>FAQ</li>
+        {compania.map((e) => {
+          return <li>{e}</li>
+        })}
       </ul>
       <ul><strong>Ajuda</strong>
-        <li>Central de ajuda</li>
-        <li>Contate-nos</li>
-        <li>Política de privacidade</li>
-        <li>Termos</li>
-        <li>Suporte personalizado</li>
+        {
+          ajuda.map((e) => {
+            return <li>{e}</li>
+          })
+        }
       </ul>
     </footer>
 

@@ -1,13 +1,18 @@
 import styles from './Card.css'
+import Button from '../Button'
+export default function Card(props) {
 
-export default function Card() {
     return (
         <div className="divCard">
             <div className='divCard1'></div>
-            <img src="https://th.bing.com/th/id/OIP.T3gTPt-jP2AFdrG12GwRxAHaE7?pid=ImgDet&rs=1" alt="" />
+            <img src={props.imagem} />
             <div className='divCard3'>
-                <h3>Nome</h3>
-                <p>Preço</p>
+                <h3>{props.nome}</h3>
+                <p>{props.preco}</p>
+                <p>{props.id}</p>
+            </div>
+            <div className='divCard4'>
+                <button onClick={props.onClick}>Deletar</button>
             </div>
         </div>
     )
