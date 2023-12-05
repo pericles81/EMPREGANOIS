@@ -28,13 +28,9 @@ export default function Form() {
 
     const handlePostRequest = async () => {
         try {
-          // Fazendo uma requisição POST para a API
-          const response = await axios.post('http://localhost:8081', form);
-    
-          // Lida com a resposta da API conforme necessário
+          const response = await axios.post('http://localhost:8081/produtos', form);
           console.log('Response from server:', response.data);
         } catch (error) {
-          // Trata erros
           console.error('Error making POST request:', error);
         }
       };

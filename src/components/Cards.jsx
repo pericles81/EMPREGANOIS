@@ -8,7 +8,7 @@ export default function Cards() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:8081');
+                const response = await axios.get('http://localhost:8081/produtos');
                 setData(response.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -17,20 +17,19 @@ export default function Cards() {
         fetchData();
     }, []);
 
-    const deletePost = async (id) =>   {
-        await axios.delete(`http://localhost:8081/${id}`)
+    const deletePost = async (id) => {
+        await axios.delete(`http://localhost:8081/produtos/${id}`)
     }
     return (
         <>
-            <div className='divCardTittle'>
-                <h2>Produtos cadastrados</h2>
-            </div>
+            {data.length ? (<>
             <div className="divCards2" >
-                {data.map((e) => {
-                    return <Card imagem={e.imagem} nome={e.nome} preco={e.preco} onClick={()=>deletePost(e._id)} />               
+            {data.map((e) => {
+                    return <Card imagem={e.imagem} nome={e.nome} preco={e.preco} onClick={() => deletePost(e._id)} />
                 })}
-                
-            </div>
+            </div></>) : <>
+                <h3>AINDA NAO EXISTEM PRODUTOS CADASTRADOS </h3>
+            </>}
         </>
     )
 }
