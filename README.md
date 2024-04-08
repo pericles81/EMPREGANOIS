@@ -1,1 +1,1 @@
-Esse projeto feito em react é a interface grafica do projeto-express, foram usadas as bibliotecas react-router-dom para fazer a paginação e axios para fazzer as requisições. O projeto foi desenvolvido para a diciplina: Código de alta performance front-end. 
+Esse projeto feito em react é a interface grafica do projeto-express, foram usadas as bibliotecas react-router-dom para fazer a paginação e axios para fazer as requisições. O projeto foi desenvolvido para a diciplina: Código de alta performance front-end. 
